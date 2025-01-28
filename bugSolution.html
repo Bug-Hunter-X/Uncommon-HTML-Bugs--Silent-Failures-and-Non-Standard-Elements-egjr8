@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Corrected HTML</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Correctly accessing a property after checking for existence
+    let element = document.getElementById("myDiv");
+    if (element) {
+        element.textContent = "Hello";
+    } else {
+        console.error("Element with id 'myDiv' not found!");
+    }
+    
+    // Correctly creating an element using lowercase or kebab-case for better standards compliance
+    let myElement = document.createElement("my-element"); // or myelement
+    myElement.textContent = "Correctly Created Element";
+    document.body.appendChild(myElement);
+  </script>
+</body>
+</html>
