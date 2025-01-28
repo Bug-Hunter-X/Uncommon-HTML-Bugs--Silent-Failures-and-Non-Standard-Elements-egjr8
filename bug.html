@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    // Incorrectly attempting to access a non-existent property
+    let element = document.getElementById("myDiv");
+    element.nonExistentProperty = "some value"; //This will not throw an error, but it's bad practice
+    console.log(element.nonExistentProperty); //undefined
+    //The above is bad practice even if it doesn't throw an error.  It's better to check for existence before using.
+    
+    //Another example - creating an element with incorrect casing:
+    let myElement = document.createElement("MyElement"); // Should be my-element or myelement for better standards
+    document.body.appendChild(myElement); 
+  </script>
+</body>
+</html>
